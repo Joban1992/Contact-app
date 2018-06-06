@@ -1,0 +1,22 @@
+<div class="row">
+<div class="col-lg-2 col-md-2 col-sm-3">
+   {{contact.firstName}}
+</div>
+<div class="col-lg-2 col-md-2 col-sm-12">
+   {{contact.lastName}}
+</div>
+<div class="col-lg-2 col-md-2 col-sm-12">
+   {{contact.email}}
+</div>
+<div class="col-lg-2 col-md-2 col-sm-12">
+   {{contact.phNumber}}
+</div>
+<div class="col-lg-2 col-md-2 col-sm-12">
+   {{contact.status}}
+</div>
+<div class="col-lg-2 col-md-2 col-sm-12">
+   <icon-button buttonType="edit"  [contact]="contact"></icon-button> |
+   <icon-button buttonType="delete" [contact]="contact"></icon-button>
+</div>
+
+</div>

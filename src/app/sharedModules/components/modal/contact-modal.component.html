@@ -1,0 +1,37 @@
+<div id="myModal" class="modal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"  class="close" data-dismiss="modal" (click)="closeModalFun()">&times;</button>
+        <h4 class="modal-title">{{title}}</h4>
+      </div>
+      <div class="modal-body">
+        <form #form="ngForm">
+        <div class="form-group">
+          <input pattern="[a-zA-Z ]*" required type="text" class="form-control" placeholder="First Name" [ngModel]="contact.firstName" #firstName="ngModel" name="firstName">
+          <div  [hidden]="!(firstName.invalid && (firstName.dirty || firstName.touched))" class="alert alert-danger" [ngStyle]="{'padding':'4px'}">Filed is required/Enter only alphabets</div>
+        </div>
+        <div class="form-group">
+          <input pattern="[a-zA-Z ]*" required type="text" class="form-control" placeholder="Last Name" [ngModel]="contact.lastName" #lastName="ngModel" name="lastName">
+          <div [hidden]="!(lastName.invalid && (lastName.dirty || lastName.touched))"  class="alert alert-danger" [ngStyle]="{'padding':'4px'}">Field is required/ Enter only alphabets</div>
+        </div>
+        <div class="form-group">
+          <input required type="email" class="form-control" id="email" placeholder="email" [ngModel]="contact.email" #email="ngModel" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+          <div [hidden]="!(email.invalid && (email.dirty || email.touched))"  class="alert alert-danger" [ngStyle]="{'padding':'4px'}">Email is required/ Enter correct email</div>
+        </div>
+        <div class="form-group">
+          <input required type="text" class="form-control" placeholder="Phone Number" [ngModel]="contact.phNumber" #phNumber="ngModel" name="phNumber" pattern="[0-9]*">
+          <div [hidden]="!(phNumber.invalid && (phNumber.dirty || phNumber.touched))"  class="alert alert-danger" [ngStyle]="{'padding':'4px'}">Field is required/ Enter number only</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default"  data-dismiss="modal" (click)="closeModalFun()">Close</button>
+          <button type="submit" class="btn btn-default"   data-dismiss="modal" (click)="addContactToList(form.value)" [disabled]="!form.form.valid">Save</button>
+        </div>
+      </form>
+      </div>
+
+    </div>
+
+  </div>

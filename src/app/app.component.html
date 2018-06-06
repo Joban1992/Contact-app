@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container" >
+  <h1>
+    {{ title }}
+  </h1>
+<div class="row" [ngStyle]="{'min-height': '80px'}">
+  <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+   <custom-alert [type]="alertType" [alertText]="alertText" *ngIf="showAlert"></custom-alert>
+ </div>
+ </div>
+<div>
+<contact-list ></contact-list>
+</div>

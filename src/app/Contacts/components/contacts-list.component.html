@@ -1,0 +1,12 @@
+
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let contact of contactList; let i = index;">
+    <contact-item [contact]="contact"></contact-item>
+  </li>
+
+</ul>
+<p  *ngIf ="contactList.length==0" class="no-data">
+    No data. Please click on <strong><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" (click)="openModal('Add Contact')">Add</button></strong> button to add contact.
+</p>
+<button *ngIf ="contactList.length>0" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" (click)="openModal('Add Contact')">Add</button>
+<contact-modal *ngIf ="showModalFlag" (addContact)="addContact($event)" [contact]="selectedContact" (closeModal)="closeModal()" [title]="modalTitle"></contact-modal>
