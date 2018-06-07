@@ -12,4 +12,5 @@ import  { SharedModule } from '../sharedModules/shared.module';
   imports:[CommonModule, SharedModule],
   exports:[ContactList]
 })
+
 export class ContactModule { }
