@@ -12,10 +12,8 @@ import  { SharedModule } from './sharedModules/shared.module';
   imports: [
     BrowserModule,
     SharedModule.forRoot(),
-    ContactModule,
-
+    ContactModule
   ],
-
   bootstrap: [AppComponent]
 })
 export class AppModule { }
