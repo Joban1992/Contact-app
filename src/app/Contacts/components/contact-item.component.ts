@@ -10,5 +10,4 @@ import { ContactStore } from '../../sharedModules/services/contact-store.service
 export class ContactItem{
   constructor(private contactStore : ContactStore){}
   @Input() contact : Contact;
-
 }
