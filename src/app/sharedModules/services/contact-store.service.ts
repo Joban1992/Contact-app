@@ -47,7 +47,6 @@ export class ContactStore{
   }
 
   getContactIndex(contact : Contact){
-    console.log(this.contactList.indexOf(contact));
     return this.contactList.indexOf(contact);
   }
 }
