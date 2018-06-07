@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
+# Download/Clone Project folder
+
+Run `git clone https://github.com/Joban1992/Contact-app.git` to get project on your local machine.
+
+
+## Install Required Packages
+
+Run `npm install` in folder which has `package.json` file.
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
