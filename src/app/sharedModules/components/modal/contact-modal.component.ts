@@ -9,24 +9,20 @@ import { Contact } from '../../modal/Contact';
 })
 export class ContactModal implements OnInit{
   addContactFlag : Boolean = false;
+  
   constructor(){
-  console.log('open')
   }
+  
   @Input() contact : Contact;
   @Input() title : string;
   @Output() addContact = new EventEmitter();
   @Output() closeModal = new EventEmitter();
-
 
   ngOnInit(){
    if((this.contact && this.contact.newContact)){
      this.addContactFlag = true;
      this.contact = new Contact();
    }
-   /*if(!this.contact.newContact){
-     this.addContactFlag = false;
-   }*/
-
   }
 
   addContactToList(event){
@@ -37,5 +33,4 @@ export class ContactModal implements OnInit{
   closeModalFun(){
     this.closeModal.emit();
   }
-
 }
