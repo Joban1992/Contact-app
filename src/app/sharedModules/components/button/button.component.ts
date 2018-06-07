@@ -7,12 +7,12 @@ import { Contact } from '../../modal/Contact';
   selector: 'icon-button',
   templateUrl: './button.component.html'
 })
+
 export class Button {
   @Input() buttonType : string;
   @Input() contact : Contact;
 
   constructor(private utilService: UtilService){
-
   }
 
   handleClick(key){
@@ -22,5 +22,4 @@ export class Button {
     }
     this.utilService.setModelState(obj);
   }
-
 }
