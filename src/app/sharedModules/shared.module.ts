@@ -14,9 +14,9 @@ import { UtilService }  from './services/Util.service';
    CustomAlert
   ],
   imports:[CommonModule, FormsModule],
-  exports:[Button, ContactModal, CustomAlert],
-  //providers:[ContactStore, AlertService]
+  exports:[Button, ContactModal, CustomAlert]
 })
+
 export class SharedModule {
    static forRoot() : ModuleWithProviders{
      return {
