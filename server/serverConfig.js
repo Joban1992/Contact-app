@@ -46,23 +46,7 @@ function writeFilesInDesFolder(dirname, destPath){
   
 }
 
-function doNPMInstall(){
-  
-npm.load(function(err) {
-  // handle errors
-  // install module ffi
-  npm.commands.install(['express', 'open', 'path'], function(er, data) {
-    // log errors or data
-  });
-
-  npm.on('log', function(message) {
-    // log installation progress
-    console.log(message);
-  });
-});
-}
 
 writeFilesInDesFolder(sourcePath, destPath).then(function(res){
-  console.log('File has been copied');
-  //doNPMInstall();
+  console.log('File has been copied to destination folder');
 });
