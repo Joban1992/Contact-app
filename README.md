@@ -4,12 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Download/Clone Project folder
 
-Run `git clone https://github.com/Joban1992/Contact-app.git` to get project on your local machine.
-
+Run `git clone https://github.com/Joban1992/Contact-app.git` to get project on your local machine, or download zip folder from `Clone or download button`.
 
 ## Install Required Packages
 
-Run `npm install` in folder which has `package.json` file.
+Run `npm install` in folder `Contacts-app` which has `package.json` file.
 
 
 ## Development server
